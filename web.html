@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="web.css">
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+<script>
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Get sign-up form element
+const signUpForm = document.querySelector('#signup-form');
+const message = document.querySelector('#message');
+
+// Handle sign-up form submission
+signUpForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Get user email and password
+  const email = signUpForm.email.value;
+  const password = signUpForm.password.value;
+
+  // Sign up the user with Firebase
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(() => {
+      // Clear form fields
+      signUpForm.reset();
+      message.textContent = 'Sign up successful!';
+    })
+    .catch((error) => {
+      message.textContent = error.message;
+    });
+});
+  
+      </script>

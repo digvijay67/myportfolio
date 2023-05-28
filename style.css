@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Ubuntu','poppins', sans-serif;
+    
+}
+
+
+.Navbar {
+    background-color: #041315;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 5rem;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    cursor: pointer;
+
+}
+
+
+
+.checkBtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.checkBtn {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+    color: #ed1e79;
+    line-height: 80px;
+}
+
+.right ul {
+    display: flex;
+    list-style: none;
+}
+
+.right ul li a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.right ul li a:hover {
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(113, 19, 201);
+
+}
+
+
+@media screen and (max-width:805px) {
+    .list .page {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(22, 7, 36);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 4rem;
+        left: 100%;
+        transition: all 1s;
+        padding: right :20% ;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .checkBtn {
+        display: block;
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
+
+}
+.web{
+    font-size: 2.5rem;
+    color: aqua;
+    cursor: pointer;
+}
+
+
+.page{
+    width: 100%;
+    height: 100%;
+    background-color: f5f5f5;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    background-image: url("https://yalantis.com/uploads/ckeditor/pictures/2916/dribble_perfect.gif"); 
+    background-size: 80%,;
+
+
+    
+}
+.payment1{
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(blueviolet);
+
+}
+.payment{  
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(#11998e, #38ef7d);
+}
+
+  
+
+ .self{
+    /* background-color: rgb(228, 235, 235);*/
+     display: flex;
+     text-align: center;
+     text-decoration: solid;
+ }
+ .self.h1{
+    margin-left: 20%;
+    margin-bottom: 20%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+ }
+ .flame{
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color:#041315;
+    box-sizing: 20%;
+    box-shadow: inset;
+    text-align: center;
+    color: rgb(215, 215, 217);
+ }
+
+.drive{
+    background-color: #041315;
+    padding-bottom:14%;
+    padding-right: 10%;
+    display: flex;
+    position: relative;
+}
+.icon{
+    content: '\e432';    
+    size: 100%;
+    background-color:#041315;
+    display: flex;
+}
+
+/*button*/
+.safe{
+    border-color: antiquewhite;
+    background-color: #041315;
+    
+}
+.sketch{
+    background-color:#041315 ;
+
+}
+.sketch h1{
+    color: #f6f3f3;
+    text-align: center;
+    justify-self: center;
+    display: flex;
+    padding-left: 40%;
+    font-size: 200%;
+}
+.sketch h2{
+    color: red;
+    text-align: center;
+    display: flex;
+    padding-top: 3%;
+    padding-left: 40%;
+    font-size: 200%;
+}
+.besti{
+    background-color: #041315;
+}
+
+.row:hover{
+    color: #fff;
+
+}
+.teams{
+    background-color: #041315;
+
+    
+}
+.format{
+    padding-right: 5%;
+    display: flex;
+}
+.brand{
+    background-color: #041315;
+    padding-bottom: 6%;
+    
+    
+    
+}
+.brand h1{
+    
+    font-weight: 200px;
+    padding-bottom: 1.5%;
+
+}
+.brand p{
+    color: #fff;
+    display: flex;
+    padding-right: 4%;
+    
+
+}
+/*.brand a{
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;    
+    border-radius: 50%;
+    padding-right: 80%;
+    padding-top: 20%;
+    padding-bottom: 30%;
+    border-style: none;
+    border-color: rgb(36, 5, 65);
+    background-color: lightgrey;
+    width: 300px;
+    
+    padding: 2px;
+    margin: 20px;
+
+
+
+
+}*/
+.face{
+    display: flex;
+    position: relative;
+    background-color: blueviolet;
+    border: 15px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 0%;
+    border-top-left-radius: 15% silver;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 15%;
+}
+
+
+  
+  .frame{
+    background-color: #041315;
+    display: flex;
+    
+
+  }
+
+  

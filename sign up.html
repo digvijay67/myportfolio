@@ -1,0 +1,143 @@
+<head>
+<link rel="stylesheet" href="signup.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+
+    
+    
+
+
+
+
+
+
+
+
+</head>
+
+<main>
+
+    <div class="button">
+        
+    </div>
+
+    <div class="winder"></div>
+
+     
+    
+    <section class="section-login">
+        
+        <div class="section-main">
+            <div class="section-login-1">
+                <div class="section-login-1-main">
+
+                    <h1 class="section-login-1-title"></h1>
+                    <p class="section-login-1-text"></p>-
+                    <div class="section-login-1-img">
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+           
+            <div class="section-login-2">
+                <div class="section-login-2-main">
+                    
+                    <h1 class="section-login-2-title">Sign up</h1>
+                    <form  class="section-login-2-form" >
+                        <div class="login-form-1">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Email Id" required>
+                        </div>
+                        <div class="login-form-2">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="login-form-3">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="At least 8 characters" required>
+                        </div>
+                        <div class="login-form-3">
+                            <label for="number">Number</label>
+                            <input type="number" id="number" placeholder="xxxxxxxxxx" required>
+                        </div>
+                        <div class="login-form-4">
+                            <input type="checkbox" id="input-checkbox">
+                            <p>By creating an account, you agree to the <a href="#">Terms & Conditions.</a></p>
+                        </div>
+                        <div class="login-form-submit-btn">
+                            <button type="submit"  href="myprofile.html">Create an Account</button>
+                        </div>
+                        <div class="login-form-5">
+                            <p>Already have an account? <a href="login.html">Sign In</a></p>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+
+// Initialize Firebase
+
+
+
+  <!-- Your HTML code here -->
+
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      databaseURL: "YOUR_DATABASE_URL",
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the database
+    var database = firebase.database();
+
+    // Listen for form submission
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var number = document.getElementById("number").value;
+
+      // Save the form data to the database
+      var formData = {
+        name: name,
+        email: email,
+        password: password,
+        number: number
+      };
+
+      // Generate a unique key for the form submission
+      var submissionKey = database.ref().child("submissions").push().key;
+
+      // Set the form data under the unique key
+      var updates = {};
+      updates["/submissions/" + submissionKey] = formData;
+
+      // Update the database
+      database.ref().update(updates)
+        .then(function() {
+          // Form data saved successfully
+          alert("Form submitted successfully!");
+          document.getElementById("myForm").reset(); // Clear form inputs
+        })
+        .catch(function(error) {
+          // An error occurred while saving form data
+          console.error("Error saving form data: ", error);
+        });
+    });
+  </script>
+</main>
+
+
+
