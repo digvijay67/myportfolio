@@ -5,23 +5,27 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
-    font-family: 'Ubuntu','poppins', sans-serif;
-    
+    font-family: 'Ubuntu', 'poppins', sans-serif;
+
+
+
+
 }
 
 
 .Navbar {
     background-color: #041315;
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
-    line-height: 5rem;
+    line-height: 7rem;
+    height: 100%;
 }
 
 .left h1 {
     font-size: 2.5rem;
     cursor: pointer;
+
 
 }
 
@@ -67,8 +71,9 @@
 
 @media screen and (max-width:805px) {
     .list .page {
-        width: 100%;
-        height: 100vh;
+        width: none;
+        height: none;
+        /*height: 100vh;*/
         background-color: rgb(22, 7, 36);
         text-align: center;
         display: flex;
@@ -77,7 +82,7 @@
         top: 4rem;
         left: 100%;
         transition: all 1s;
-        padding: right :20% ;
+        padding: right:20%;
     }
 
     #check {
@@ -93,87 +98,97 @@
     }
 
 }
-.web{
+
+.web {
     font-size: 2.5rem;
     color: aqua;
     cursor: pointer;
 }
 
 
-.page{
-    width: 100%;
-    height: 100%;
+.page {
+    min-width: none;
+    max-width: none;
+    min-height: none;
+    max-height: none;
     background-color: f5f5f5;
     padding-top: 4%;
     padding-bottom: 8%;
-    background-image: url("https://yalantis.com/uploads/ckeditor/pictures/2916/dribble_perfect.gif"); 
-    background-size: 80%,;
+    background-image: url("https://yalantis.com/uploads/ckeditor/pictures/2916/dribble_perfect.gif");
+    background-size: 80%, ;
 
 
-    
+
 }
-.payment1{
+
+.payment1 {
     padding: 15px;
     border-radius: 5px;
     background: linear-gradient(blueviolet);
 
 }
-.payment{  
+
+.payment {
     padding: 15px;
     border-radius: 5px;
     background: linear-gradient(#11998e, #38ef7d);
 }
 
-  
 
- .self{
+
+.self {
     /* background-color: rgb(228, 235, 235);*/
-     display: flex;
-     text-align: center;
-     text-decoration: solid;
- }
- .self.h1{
+    display: flex;
+    text-align: center;
+    text-decoration: solid;
+}
+
+.self.h1 {
     margin-left: 20%;
     margin-bottom: 20%;
     padding-top: 20%;
     padding-bottom: 20%;
- }
- .flame{
+}
+
+.flame {
     display: flex;
     padding-top: 10%;
     padding-bottom: 10%;
-    background-color:#041315;
+    background-color: #041315;
     box-sizing: 20%;
     box-shadow: inset;
     text-align: center;
     color: rgb(215, 215, 217);
- }
+}
 
-.drive{
+.drive {
     background-color: #041315;
-    padding-bottom:14%;
+    padding-bottom: 14%;
     padding-right: 10%;
     display: flex;
     position: relative;
 }
-.icon{
-    content: '\e432';    
+
+.icon {
+    content: '\e432';
     size: 100%;
-    background-color:#041315;
+    background-color: #041315;
     display: flex;
 }
 
 /*button*/
-.safe{
+.safe {
     border-color: antiquewhite;
     background-color: #041315;
-    
-}
-.sketch{
-    background-color:#041315 ;
 
 }
-.sketch h1{
+
+.sketch {
+    background-color: #041315;
+
+}
+
+.sketch h1 {
     color: #f6f3f3;
     text-align: center;
     justify-self: center;
@@ -181,7 +196,8 @@
     padding-left: 40%;
     font-size: 200%;
 }
-.sketch h2{
+
+.sketch h2 {
     color: red;
     text-align: center;
     display: flex;
@@ -189,43 +205,50 @@
     padding-left: 40%;
     font-size: 200%;
 }
-.besti{
+
+.besti {
     background-color: #041315;
 }
 
-.row:hover{
+.row:hover {
     color: #fff;
 
 }
-.teams{
+
+.teams {
     background-color: #041315;
 
-    
+
 }
-.format{
+
+.format {
     padding-right: 5%;
     display: flex;
 }
-.brand{
+
+.brand {
     background-color: #041315;
     padding-bottom: 6%;
-    
-    
-    
+
+
+
 }
-.brand h1{
-    
+
+.brand h1 {
+
     font-weight: 200px;
     padding-bottom: 1.5%;
 
 }
-.brand p{
+
+.brand p {
     color: #fff;
     display: flex;
     padding-right: 4%;
-    
+
 
 }
+
 /*.brand a{
     position: relative;
     display: flex;
@@ -247,7 +270,7 @@
 
 
 }*/
-.face{
+.face {
     display: flex;
     position: relative;
     background-color: blueviolet;
@@ -263,12 +286,10 @@
 }
 
 
-  
-  .frame{
+
+.frame {
     background-color: #041315;
     display: flex;
-    
 
-  }
 
-  
+}
